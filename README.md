@@ -1,10 +1,10 @@
 # Adminer Theme Switcher
 
-Quickly switch Adminer themes from browser or command line.
+Quickly switch [Adminer](https://www.adminer.org/) themes from browser or command line.
 
 ## Installation
 
-Copy `adminer-theme-switcher.php` alongside Adminer script.
+Copy [`adminer-theme-switcher.php`](https://raw.githubusercontent.com/felladrin/adminer-theme-switcher/master/adminer-theme-switcher.php) alongside Adminer script.
 
 ## Screenshots
 
