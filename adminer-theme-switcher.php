@@ -81,11 +81,11 @@ class AdminerThemeSwitcher
         $themeName = static::getThemeList()[$themeIndex]->name;
         $urlOfCssFileFromGithubRepo = "https://raw.githubusercontent.com/vrana/adminer/master/designs/{$themeName}/adminer.css";
         $cssContent = file_get_contents($urlOfCssFileFromGithubRepo);
-        $fileName = 'adminer.css';
+        $filePath = __DIR__ . '/adminer.css';
         $fileExists = file_exists('adminer.css');
-        if (file_put_contents($fileName, $cssContent) !== false) {
+        if (file_put_contents($filePath, $cssContent) !== false) {
             if (!$fileExists) {
-                chmod($fileName, 0777);
+                chmod($filePath, 0777);
             }
 
             return true;
