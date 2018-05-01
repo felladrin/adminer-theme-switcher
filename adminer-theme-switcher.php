@@ -138,7 +138,7 @@ class AdminerThemeSwitcher
         echo 'setTimeout(function() {';
         echo 'var option = prompt("' . static::$prompt . '", "0");';
         echo 'if (option !== null) { window.location.replace(window.location.href.split("?")[0] + "?option=" + option); }';
-        echo '});';
+        echo '}, 1000);';
         echo '</script>';
     }
 
