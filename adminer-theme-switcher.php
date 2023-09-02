@@ -60,6 +60,10 @@ class AdminerThemeSwitcher
                 'header' => [
                     'User-Agent: PHP'
                 ]
+            ],
+            'ssl' => [
+                "verify_peer" => false,
+                "verify_peer_name" => false
             ]
         ]);
 
