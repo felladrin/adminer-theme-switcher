@@ -138,7 +138,7 @@ class AdminerThemeSwitcher
 
     public static function printJavascriptPrompt()
     {
-        echo '<script>';
+        echo '<script' . Adminer\nonce() . '>';
         echo 'setTimeout(function() {';
         echo 'var option = prompt("' . static::$prompt . '", "0");';
         echo 'if (option !== null) { window.location.replace(window.location.href.split("?")[0] + "?option=" + option); }';
@@ -173,8 +173,8 @@ class AdminerThemeSwitcher
             echo $errorMessage . static::getLineEnding();
             static::run();
         } else {
-            echo '<script>alert("' . $errorMessage . '")</script>';
-            echo '<script>window.location.replace(window.location.href.split("?")[0])</script>';
+            echo '<script' . Adminer\nonce() . '>alert("' . $errorMessage . '")</script>';
+            echo '<script' . Adminer\nonce() . '>window.location.replace(window.location.href.split("?")[0])</script>';
         }
     }
 
